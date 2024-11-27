@@ -1,0 +1,146 @@
+/* Reset and Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: white;
+  overflow: hidden; /* Prevents scrolling caused by floating circles */
+  position: relative;
+}
+
+/* Background Floating Circles */
+.floating-circles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind the content */
+  /* overflow: hidden; */
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  filter: blur(30px);
+}
+
+.circle1 {
+  background-color: rgba(208, 255, 0, 0.582);
+  width: 150px;
+  height: 150px;
+}
+
+.circle2 {
+  background-color: #ff007f;
+  width: 100px;
+  height: 100px;
+}
+
+.circle3 {
+  background-color: #007bff;
+  width: 200px;
+  height: 200px;
+}
+
+.circle4 {
+  background-color: #ffdd00;
+  width: 120px;
+  height: 120px;
+}
+
+/* Floating Circles Random Placement */
+.circle {
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  mix-blend-mode: overlay;
+}
+
+/* Main Content Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+.cta {
+  padding: 10px 20px;
+  background-color: #29b810;
+  color: #000;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+
+.headline {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 15%;
+}
+
+.headline span {
+  color: #39ff14;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.highlight {
+  color: #39ff14;
+  font-weight: bold;
+}
+/* Video Container */
+.video-container {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#promo-video {
+  width: 80%; /* Adjust the size of the video */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  opacity: 0; /* Start as hidden for animation */
+}
+
